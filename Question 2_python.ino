@@ -24,12 +24,12 @@ def calculate_distance(a, b, c, x0, y0):
     Returns:
     r: 점에서 직선까지의 거리
     """
-    # 법선 벡터와 점 벡터의 내적을 이용하여 분자를 계산합니다.
+    # 법선(평명에서의 해당 선에 대한 방향) 벡터와 점 벡터의 내적을 이용하여 분자를 계산합니다.
     normal_vector = (a, b)
     point_vector = (x0, y0)
     numerator = abs(vector_inner_product(normal_vector, point_vector) + c)
     
-    # 법선 벡터의 크기를 계산하여 분모를 구합니다.
+    # 법선(평명에서의 해당 선에 대한 방향) 벡터의 크기를 계산하여 분모를 구합니다.
     denominator = math.sqrt(vector_inner_product(normal_vector, normal_vector))
     
     # 수직 거리 r을 계산합니다.
